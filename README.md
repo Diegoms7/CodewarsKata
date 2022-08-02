@@ -1,3 +1,3 @@
 # CodewarsKata
 
-All the codes solved from Codewards will be uploaded here!
+All the codes solved from Codewars will be uploaded here!
