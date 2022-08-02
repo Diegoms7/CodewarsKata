@@ -1,23 +1,22 @@
 /*
-Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
-
-Rules for a smiling face:
-
-Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
-A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
-Every smiling face must have a smiling mouth that should be marked with either ) or D
-No additional characters are allowed except for those mentioned.
-
-Valid smiley face examples: :) :D ;-D :~)
-Invalid smiley faces: ;( :> :} :]
+An isogram is a word that has no repeating letters, consecutive or non-consecutive. 
+Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. 
+Ignore letter case.
 */
 
-import java.util.*;
+public class isogram {
+    public static boolean  isIsogram(String str) {
+      
+        str = str.toLowerCase();
+        boolean result = true;
 
-public class SmileFaces {
-  
-  public static int countSmileys(List<String> arr) {
-      // Just Smile :)
-      return 0;
-  }
+        for (int i = 0; i < str.length(); i++) {
+            if (str.indexOf(str.charAt(i)) != str.lastIndexOf(str.charAt(i))) {
+                result = false;
+            }
+
+        }
+      
+        return result;
+    } 
 }
